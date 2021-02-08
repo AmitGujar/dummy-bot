@@ -1,0 +1,20 @@
+{
+  "name": "dummy-bot",
+  "version": "1.0.0",
+  "description": "dummy is discord bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord-jokes": "^3.0.0",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "free-facts": "^1.0.0",
+    "quotegarden": "^1.1.0"
+  }
+}
