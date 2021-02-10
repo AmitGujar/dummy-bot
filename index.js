@@ -41,6 +41,13 @@ client.on("message", (message) => {
         const text = "My dad is Amit Gujar 😍";
         message.reply(text);
     }
+    client.user.setPresence({
+        status: 'online',
+        activity: {
+            name: 'Streaming (whatever)',
+            type: 'PLAYING',
+        }
+    });
 });
 
 client.login(process.env.BOT_TOKEN);
