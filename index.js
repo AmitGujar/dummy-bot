@@ -1,6 +1,7 @@
 const { getRandomFacts } = require("free-facts");
 const giveMeAJoke = require('discord-jokes');
 const discord = require("discord.js");
+var catMe = require('cat-me')
 const express = require("express");
 const app = express();
 const prefix = "!"
@@ -40,6 +41,9 @@ client.on("message", (message) => {
     else if (command === "dad") {
         const text = "My dad is Amit Gujar 😍";
         message.reply(text);
+    }
+    else if (command === "cat") {
+        message.channel.send(catMe());
     }
     client.user.setPresence({
         status: 'online',
