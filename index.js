@@ -1,4 +1,4 @@
-const { getRandomFacts } = require("free-facts");
+const { getRandomFacts } = require("free-git facts");
 const giveMeAJoke = require('discord-jokes');
 const discord = require("discord.js");
 var catMe = require('cat-me')
@@ -12,13 +12,15 @@ app.listen(process.env.PORT || 3000, ()=> {
     console.log("server started");
 })
 
-console.log("bot is online");
+client.on("ready", () => {
+    console.log(`Logged in as ${client.user.tag}!`);
+  });
 
 client.on("message", (message) => {
     if (message.author.bot)
         return;
     if (!message.content.startsWith(prefix)) {
-        console.log("command error");
+        console.log(message.author);
     }
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(' ');
@@ -68,8 +70,7 @@ client.on("message", (message) => {
         const member = message.guild.member(user);
         // If the member is in the guild
         if (member) {
-          member
-            .kick()
+          member.kick()
             .then(() => {
               message.reply(`Successfully kicked ${user.tag}`);
             })
