@@ -1,4 +1,4 @@
-const { getRandomFacts } = require("free-facts");
+const { getRandomFacts } = require("freefacts");
 const giveMeAJoke = require("discord-jokes");
 const discord = require("discord.js");
 var catMe = require("cat-me");
