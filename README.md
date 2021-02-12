@@ -15,6 +15,6 @@ Utility:
 
 ```
 
-To add Dummy to your server, click here: https://discord.com/oauth2/authorize?client_id=808341799022231566&permissions=8&scope=bot
+Click here to add[Download](https://discord.com/oauth2/authorize?client_id=808341799022231566&permissions=8&scope=bot)
 
 #### Powered by Heroku
