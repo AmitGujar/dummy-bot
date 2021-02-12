@@ -15,7 +15,6 @@
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "free-facts": "^1.0.0",
     "freefacts": "^1.1.0",
     "quotegarden": "^1.1.0"
   }
