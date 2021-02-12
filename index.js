@@ -44,7 +44,7 @@ client.on("message", (message) => {
   client.user.setPresence({
     status: "online",
     activity: {
-      name: "lol (whatever)",
+      name: "Loyal to Cybr",
       type: "PLAYING",
     },
   });
@@ -54,20 +54,21 @@ client.on("message", (message) => {
   if (!message.guild) return;
   if (message.content.startsWith("!kick")) {
     const user = message.mentions.users.first();
-    // if user is me lol
-    if (user.tag === "DedSeec#4456") {
-      message.reply("Wtf u doing, I can't kick my dad");
-    }
     // If we have a user mentioned
-    else if (user) {
+    if (user) {
       // Now we get the member from the user
       const member = message.guild.member(user);
-      // If the member is in the guild
-      if (member) {
+        // if user is me or dummy
+      if (user.discriminator === "7504"|| user.discriminator === "4456") {
+        message.reply("Wtf u doing, I can't kick myself");
+      }
+    // If the member is in the guild
+      else if (member) {
         member
           .kick()
           .then(() => {
             message.reply(`Successfully kicked ${user.tag}`);
+            console.log(user);
           })
           .catch((err) => {
             message.reply("Looks like you don't have permission");
